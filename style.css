@@ -38,18 +38,19 @@ body {
     margin-top: 1em;
     text-transform: uppercase;
     font-weight: 500;
-    
-    
-}
-
-.btn-primary {
+  }
+  
+  .btn-primary {
     background-color: #1654a0;
     color: #fff;
-}
-
-.btn-primary:hover {
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
     background-color: #0d0d61;
-}
+  }
+  
 
 /* ###################### Navbar ######################### */
 
@@ -98,7 +99,7 @@ body {
 }
 
 .navbar-container .nav-item a:hover {
-    color: #117964;
+    color: #1654a0;
 }
 
 .navbar-container .logo {
@@ -210,25 +211,25 @@ body {
 
 /* ################### Projetos ###################### */
 
-.projetos {
+.project {
     padding: 5rem 0 10rem 0;
 }
 
-.projetos h1 {
+.project h1 {
     text-align: center;
     padding: 0 0 5rem 0;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     font-weight: 400;
     text-transform: uppercase;
     color: #666;
 }
 
-.projetos-container {
-    display:flex ;
+.project-container {
+    display: flex;
     justify-content: space-around;
 }
 
-.projetos-container img {
+.project-container img {
     display: block;
     max-width: 100%;
     margin: auto;
@@ -237,12 +238,12 @@ body {
     object-position: center;
 }
 
-.projetos-container .projetos-box {
+.project-container .project-box {
     margin: 0 1rem;
     position: relative;
 }
 
-.projetos-container .projetos-box::after {
+.project-container .project-box::after {
     content: "";
     display: inline-block;
     background: rgba(0, 0, 0, 0.451);
@@ -258,21 +259,44 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+.project-container .project-box:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+}
 
-
-.projetos-container .projetos-box .img-content h2 {
+.project-container .project-box .img-content h2 {
     font-size: 3rem;
     font-weight: 700;
 }
 
-.projetos-container .projetos-box .img-content a {
-    font-size: 1.4rem;
+/* Estilos para os botões */
+.project-container .project-box .img-content .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.projetos-container .projetos-box .img-content {
+.project-container .project-box .img-content .btn-container a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-container .project-box .img-content .btn-container a:hover {
+    background-color: #666;
+}
+
+.project-container .project-box .img-content {
     text-align: center;
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
@@ -282,10 +306,11 @@ body {
     transition: all 0.3s ease-in-out 0.1s;
 }
 
-.projetos-container .projetos-box:hover .img-content {
+.project-container .project-box:hover .img-content {
     opacity: 1;
     top: 50%;
 }
+
 
 /* ################# Food Menu ################# */
 
@@ -591,3 +616,21 @@ body {
     appearance: none;
   }
   
+  .button-container {
+  display: flex;
+  justify-content: center;
+  max-width: 600px; /* ajuste o valor conforme necessário */
+  margin: auto; /* centraliza horizontalmente a div */
+}
+
+.button-container a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza verticalmente o conteúdo */
+    max-width: 160px; /* ajuste o valor conforme necessário */
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    margin: 10px; /* adiciona um espaço entre os botões */
+  }
